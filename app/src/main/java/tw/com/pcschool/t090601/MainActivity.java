@@ -47,12 +47,14 @@ public class MainActivity extends AppCompatActivity {
     {
         File[] f = new File[0];
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            //這是新的寫法，會指到應用程式專屬目錄，當應用程式移除時，檔案也會被移除
             f = getExternalFilesDirs(null);
             for (File ff : f) {
                 Log.d("FILE", ff.toString());
             }
 
         }
+        //這是舊的寫法，會存到根目錄，不建議使用
         File f2 = Environment.getExternalStorageDirectory();
         Log.d("FILE", f2.toString());
 
