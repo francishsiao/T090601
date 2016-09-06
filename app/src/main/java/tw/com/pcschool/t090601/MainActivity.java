@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         File path = getFilesDir();
         // File f = new File(path.toString(), "mydata.txt");
         // String fName = f.toString();
-        String fName = f[0].toString() + "/" + "mydata.txt";
+        String fName = f2.toString() + "/" + "mydata.txt";
         FileOutputStream fOut = null;
         try {
             fOut = new FileOutputStream(fName);
